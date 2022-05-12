@@ -1,12 +1,16 @@
 
 
-We have following two relations: R(A,B,C) and S(C,D). Rewrite the following relational algebra expressions into SQL. Run the SQL queries on the tables R and S and give the results too. Send the SQL and the result.
+We have following two relations: R(A,B,C) and S(C,D). Rewrite the following relational algebra expressions into SQL. 
+Run the SQL queries on the tables R and S and give the results too. Send the SQL and the result.
+
 π A ( γ A; SUM(D) -> SU ( σ A = 'X' ∧C = S.C (R ⨯ S) ) )
 τ A ( π A, SU ( σ SU > 10 ∧ SU < 100 ( γ A; SUM(D) -> SU (R ⨝ S) ) ) )
 π A (R) - π A ( σ R.B = S.C ∧D < 10 (R ⨯ S) )
 
 
-We have the following two relations: R(A,B,C) and S(C,D). Rewrite the following SQL queries into (extended) relational algebra. Send the relational algebra expressions. (3x2 points)
+We have the following two relations: R(A,B,C) and S(C,D). Rewrite the following SQL queries into (extended) relational algebra. 
+Send the relational algebra expressions. (3x2 points)
+
 SELECT A, SUM(D) FROM R NATURAL JOIN S WHERE D < 10 GROUP BY A;
 SELECT A FROM R, S WHERE R.B = S.C GROUP BY A HAVING SUM(D) > 20;
 SELECT A, C FROM R CROSS JOIN S WHERE D BETWEEN 2 AND 15 ORDER BY C, A;
